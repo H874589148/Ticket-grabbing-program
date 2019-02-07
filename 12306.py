@@ -12,5 +12,28 @@ def getlist():
     dict_html = json.loads(html)
     return dict_html['data']
 
-for i in getlist():
-    print("i")
+t=0
+while not t:
+    for i in getlist():
+        #print("i")
+        yp = i['queryLeftNewDTO']['yw_num']
+        if yp != '无' and yp != '--':
+            if yp == '有':
+                print '还有余票'
+            else:
+                print'还有%s张余票' %yp
+            t = 1
+            break
+        else:
+            print'没有余票，继续监测'
+    if t:
+        break
+
+# 阿里大于
+# 阿里大于
+# 阿里大于
+# 阿里大于
+# 阿里大于
+# 阿里大于
+# 阿里大于
+# 阿里大于
